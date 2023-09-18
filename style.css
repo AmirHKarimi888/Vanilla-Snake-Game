@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.board {
+  @apply mx-auto aspect-square border border-gray-500;
+}
+
+.snake {
+  @apply w-[20px] aspect-square bg-pink-900;
+}
