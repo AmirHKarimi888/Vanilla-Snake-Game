@@ -7,5 +7,9 @@
 }
 
 .snake {
+  @apply w-[20px] bg-pink-900 absolute;
+}
+
+.food {
   @apply w-[20px] aspect-square bg-pink-900;
 }
