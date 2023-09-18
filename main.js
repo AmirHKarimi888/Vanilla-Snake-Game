@@ -11,12 +11,12 @@ function randomIntFromInterval(min, max) { // min and max included
 let x = 5;
 let y = 5;
 
-let foodX = randomIntFromInterval(0, 335);
-let foodY = randomIntFromInterval(0, 335);
+let foodX = randomIntFromInterval(0, 324);
+let foodY = randomIntFromInterval(0, 324);
 
 let snakeH = 20;
 
-let moveFunc = () => {};
+let moveFunc = () => { };
 
 let moveInterval = setInterval(moveFunc, 6);
 
@@ -25,18 +25,30 @@ const setRightMove = () => {
   moveFunc = () => {
     x += 1;
     snake.style.marginLeft = `${x}px`;
-    if(x == 338) {
+    if (x == 324) {
       clearInterval(moveInterval);
-      app.append(result);
+
+      const resultScore = document.createElement("div");
+      resultScore.id = "resultScore";
+      resultScore.innerHTML = "Score : " + scoreValue;
+
+      result.append(message);
+      result.append(document.createElement("br"));
+      result.append(resultScore);
+      result.append(document.createElement("br"));
+      result.append(resetBtn);
+      resultBackdrop.append(result);
+
+      app.append(resultBackdrop);
     }
 
-    if(foodX - 10 < x && x < foodX + 10 && foodY - 10 < y && y < foodY + 10) {
+    if (foodX - 10 < x && x < foodX + 10 && foodY - 10 < y && y < foodY + 10) {
       scoreValue += 5;
       score.innerHTML = "score : " + scoreValue;
-      foodX = randomIntFromInterval(0, 335);
-      foodY = randomIntFromInterval(0, 335);
+      foodX = randomIntFromInterval(0, 324);
+      foodY = randomIntFromInterval(0, 324);
       food.style.marginLeft = foodX + "px";
-      food.style.marginTop =  foodY + "px";
+      food.style.marginTop = foodY + "px";
       //snakeH += 20;
       //snake.style.height = snakeH + "px";
     }
@@ -50,18 +62,30 @@ const setLeftMove = () => {
   moveFunc = () => {
     x -= 1;
     snake.style.marginLeft = `${x}px`;
-    if(x == 0) {
+    if (x == 0) {
       clearInterval(moveInterval);
-      app.append(result);
+      
+      const resultScore = document.createElement("div");
+      resultScore.id = "resultScore";
+      resultScore.innerHTML = "Score : " + scoreValue;
+      
+      result.append(message);
+      result.append(document.createElement("br"));
+      result.append(resultScore);
+      result.append(document.createElement("br"));
+      result.append(resetBtn);
+      resultBackdrop.append(result);
+
+      app.append(resultBackdrop);
     }
 
-    if(foodX - 10 < x && x < foodX + 10 && foodY - 10 < y && y < foodY + 10) {
+    if (foodX - 10 < x && x < foodX + 10 && foodY - 10 < y && y < foodY + 10) {
       scoreValue += 5;
       score.innerHTML = "score : " + scoreValue;
-      foodX = randomIntFromInterval(0, 335);
-      foodY = randomIntFromInterval(0, 335);
+      foodX = randomIntFromInterval(0, 324);
+      foodY = randomIntFromInterval(0, 324);
       food.style.marginLeft = foodX + "px";
-      food.style.marginTop =  foodY + "px";
+      food.style.marginTop = foodY + "px";
       //snakeH += 20;
       //snake.style.height = snakeH + "px";
     }
@@ -76,18 +100,30 @@ const setUpMove = () => {
   moveFunc = () => {
     y -= 1;
     snake.style.marginTop = `${y}px`;
-    if(y == 0) {
+    if (y == 0) {
       clearInterval(moveInterval);
-      app.append(result);
+      
+      const resultScore = document.createElement("div");
+      resultScore.id = "resultScore";
+      resultScore.innerHTML = "Score : " + scoreValue;
+      
+      result.append(message);
+      result.append(document.createElement("br"));
+      result.append(resultScore);
+      result.append(document.createElement("br"));
+      result.append(resetBtn);
+      resultBackdrop.append(result);
+
+      app.append(resultBackdrop);
     }
 
-    if(foodX - 10 < x && x < foodX + 10 && foodY - 10 < y && y < foodY + 10) {
+    if (foodX - 10 < x && x < foodX + 10 && foodY - 10 < y && y < foodY + 10) {
       scoreValue += 5;
       score.innerHTML = "score : " + scoreValue;
-      foodX = randomIntFromInterval(0, 335);
-      foodY = randomIntFromInterval(0, 335);
+      foodX = randomIntFromInterval(0, 324);
+      foodY = randomIntFromInterval(0, 324);
       food.style.marginLeft = foodX + "px";
-      food.style.marginTop =  foodY + "px";
+      food.style.marginTop = foodY + "px";
       //snakeH += 20;
       //snake.style.height = snakeH + "px";
     }
@@ -100,18 +136,30 @@ const setDownMove = () => {
   moveFunc = () => {
     y += 1;
     snake.style.marginTop = `${y}px`;
-    if(y == 338) {
+    if (y == 324) {
       clearInterval(moveInterval);
-      app.append(result);
+      
+      const resultScore = document.createElement("div");
+      resultScore.id = "resultScore";
+      resultScore.innerHTML = "Score : " + scoreValue;
+      
+      result.append(message);
+      result.append(document.createElement("br"));
+      result.append(resultScore);
+      result.append(document.createElement("br"));
+      result.append(resetBtn);
+      resultBackdrop.append(result);
+
+      app.append(resultBackdrop);
     }
 
-    if(foodX - 10 < x && x < foodX + 10 && foodY - 10 < y && y < foodY + 10) {
+    if (foodX - 10 < x && x < foodX + 10 && foodY - 10 < y && y < foodY + 10) {
       scoreValue += 5;
       score.innerHTML = "score : " + scoreValue;
-      foodX = randomIntFromInterval(0, 335);
-      foodY = randomIntFromInterval(0, 335);
+      foodX = randomIntFromInterval(0, 324);
+      foodY = randomIntFromInterval(0, 324);
       food.style.marginLeft = foodX + "px";
-      food.style.marginTop =  foodY + "px";
+      food.style.marginTop = foodY + "px";
       //snakeH += 20;
       //snake.style.height = snakeH + "px";
     }
@@ -121,7 +169,7 @@ const setDownMove = () => {
 }
 
 document.addEventListener("keydown", (event) => {
-  switch(event.key) {
+  switch (event.key) {
     case "ArrowRight":
       setRightMove();
       break;
@@ -133,7 +181,7 @@ document.addEventListener("keydown", (event) => {
     case "ArrowUp":
       setUpMove();
       break;
-    
+
     case "ArrowDown":
       setDownMove();
       break;
@@ -154,45 +202,64 @@ snake.style.height = snakeH + "px";
 const food = document.createElement("div");
 food.className = "food";
 food.style.marginLeft = foodX + "px";
-food.style.marginTop =  foodY + "px";
+food.style.marginTop = foodY + "px";
 
 const control = document.createElement("div");
 control.className = "control";
 
 const btnR = document.createElement("button");
-btnR.innerHTML = "R";
+btnR.id = "btnR";
+const btnRIcon = document.createElement("i");
+btnRIcon.className = "fa fa-arrow-right";
+btnR.append(btnRIcon);
 btnR.addEventListener("click", setRightMove);
 
-const btnL = document.createElement("button");
-btnL.innerHTML = "L";
-btnL.addEventListener("click", setLeftMove);
-
 const btnU = document.createElement("button");
-btnU.innerHTML = "U";
+btnU.id = "btnU";
+const btnUIcon = document.createElement("i");
+btnUIcon.className = "fa fa-arrow-up";
+btnU.append(btnUIcon);
 btnU.addEventListener("click", setUpMove);
 
 const btnD = document.createElement("button");
-btnD.innerHTML = "B";
+btnD.id = "btnD";
+const btnDIcon = document.createElement("i");
+btnDIcon.className = "fa fa-arrow-down";
+btnD.append(btnDIcon);
 btnD.addEventListener("click", setDownMove);
+
+const btnL = document.createElement("button");
+btnL.id = "btnL";
+const btnLIcon = document.createElement("i");
+btnLIcon.className = "fa fa-arrow-left";
+btnL.append(btnLIcon);
+btnL.addEventListener("click", setLeftMove);
 
 const score = document.createElement("div");
 score.className = "score";
-score.innerHTML = "score : " + scoreValue;
+score.innerHTML = "Score : " + scoreValue;
+
+const resultBackdrop = document.createElement("div");
+resultBackdrop.className = "resultBackdrop";
 
 const result = document.createElement("div");
 result.className = "result";
-result.innerHTML = "You Losed!";
+const message = document.createElement("div");
+message.innerHTML = "You Losed!";
+
+const resetBtn = document.createElement("button");
+resetBtn.className = "resetBtn";
+resetBtn.innerHTML = "Reset";
+resetBtn.addEventListener("click", () => {
+  window.location.href = "/";
+})
 
 
-
-
-
-
-
-control.append(btnR);
-control.append(btnL);
 control.append(btnU);
+control.append(document.createElement("br"));
+control.append(btnL);
 control.append(btnD);
+control.append(btnR);
 control.append(score);
 
 board.append(snake);
